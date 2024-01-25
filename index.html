@@ -1,75 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Social Existence</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #DEDBD2;
-            text-align: center;
-        }
+  <meta charset="utf-8" />
+  <title>Social Existence</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
 
-        h1 {
-            margin-bottom: 20px;
-        }
+    #comments {
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
 
-        #comments {
-            border: 1px solid #ccc;
-            padding: 10px;
-            max-height: 300px;
-            overflow-y: auto;
-            background-color: #F7E1D7;
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-            text-align: left;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            background-color: #F7E1D7;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #commentInput {
-            margin-top: 20px;
-        }
-    </style>
+    #commentInput {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Social Existence</h1>
+  <h1>Social Existence</h1>
 
-    <label for="username">Your Name:</label>
-    <input type="text" id="username" placeholder="Enter your name">
+  <label for="username">Your Name:</label>
+  <input type="text" id="username" placeholder="Enter your name">
 
-    <div id="comments"></div>
+  <div id="comments"></div>
 
-    <label for="commentInput">Leave a Comment:</label>
-    <input type="text" id="commentInput" placeholder="Type your comment">
-    <button onclick="publishComment()">Submit Comment</button>
+  <label for="commentInput">Leave a Comment:</label>
+  <input type="text" id="commentInput" placeholder="Type your comment">
+  <button onclick="publishComment()">Submit Comment</button>
 
-    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-    <script>
-        // Your existing JavaScript code remains unchanged
-        // ...
-        const client = mqtt.connect('wss://social-existence:socialexistence@social-existence.cloud.shiftr.io', {
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script>
+    const client = mqtt.connect('wss://social-existence:socialexistence@social-existence.cloud.shiftr.io', {
       clientId: 'javascript'
     });
 
@@ -113,6 +79,6 @@
         commentsDiv.removeChild(commentsDiv.lastChild);
       }
     }
-    </script>
+  </script>
 </body>
 </html>
