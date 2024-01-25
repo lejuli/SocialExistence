@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Social Existence</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #comments {
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    #commentInput {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Social Existence</h1>
+
+  <label for="username">Your Name:</label>
+  <input type="text" id="username" placeholder="Enter your name">
+
+  <div id="comments"></div>
+
+  <label for="commentInput">Leave a Comment:</label>
+  <input type="text" id="commentInput" placeholder="Type your comment">
+  <button onclick="publishComment()">Submit Comment</button>
+
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script>
+    const client = mqtt.connect('wss://social-existence:socialexistence@social-existence.cloud.shiftr.io', {
+      clientId: 'javascript'
+    });
+
+    let username = "";
+
+    client.on('connect', function() {
+      console.log('connected!');
+      client.subscribe('chat');
+    });
+
+    client.on('message', function(topic, message) {
+      console.log(topic + ': ' + message.toString());
+      displayComment(message.toString());
+    });
+
+    document.getElementById('username').addEventListener('change', function(event) {
+      username = event.target.value;
+    });
+
+    function publishComment() {
+      const commentInput = document.getElementById('commentInput');
+      const comment = commentInput.value.trim();
+
+      if (comment !== "") {
+        const fullComment = `${username}: ${comment}`;
+        client.publish('chat', fullComment);
+        commentInput.value = "";
+      }
+    }
+
+    function displayComment(comment) {
+      const commentsDiv = document.getElementById('comments');
+      const p = document.createElement('p');
+      p.textContent = comment;
+
+      // Display the newest comment at the top
+      commentsDiv.insertBefore(p, commentsDiv.firstChild);
+
+      // Remove the oldest comment if there are more than 15
+      if (commentsDiv.children.length > 15) {
+        commentsDiv.removeChild(commentsDiv.lastChild);
+      }
+    }
+  </script>
+</body>
+</html>
