@@ -55,6 +55,13 @@
       username = event.target.value;
     });
 
+    // Modify the event listener to handle "Enter" key press and "Go" button press
+    document.getElementById('commentInput').addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === 'Go') {
+        publishComment();
+      }
+    });
+
     function publishComment() {
       const commentInput = document.getElementById('commentInput');
       const comment = commentInput.value.trim();
