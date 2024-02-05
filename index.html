@@ -19,13 +19,20 @@
     #commentInput {
       margin-top: 10px;
     }
+
+    .actionButton {
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    /* Style to place buttons on separate lines */
+    .actionButtonContainer {
+      display: block;
+    }
   </style>
 </head>
 <body>
   <h1>Social Existence</h1>
-
-  <label for="username">Your Name:</label>
-  <input type="text" id="username" placeholder="Enter your name">
 
   <div id="comments"></div>
 
@@ -33,13 +40,31 @@
   <input type="text" id="commentInput" placeholder="Type your comment">
   <button onclick="publishComment()">Submit Comment</button>
 
+  <!-- Buttons with separate functions and topics on separate lines -->
+  <div class="actionButtonContainer">
+    <button class="actionButton" onclick="sendAction('zoom/TL')">Top Left
+  </div>
+  <div class="actionButtonContainer">
+    <button class="actionButton" onclick="sendAction('zoom/TR')">Top Right</button>
+  </div>
+  <div class="actionButtonContainer">
+    <button class="actionButton" onclick="sendAction('zoom/C')">Center</button>
+  </div>
+  <div class="actionButtonContainer">
+    <button class="actionButton" onclick="sendAction('zoom/BL')">Bottom Left</button>
+  </div>
+  <div class="actionButtonContainer">
+    <button class="actionButton" onclick="sendAction('zoom/BR')">Bottom Rigth</button>
+  </div>
+  <div class="actionButtonContainer">
+    <button class="actionButton" onclick="sendAction('zoom/RESET')">Reset</button>
+  </div>
+
   <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
   <script>
     const client = mqtt.connect('wss://social-existence:socialexistence@social-existence.cloud.shiftr.io', {
       clientId: 'chatserver'
     });
-
-    let username = "";
 
     client.on('connect', function() {
       console.log('connected!');
@@ -49,10 +74,6 @@
     client.on('message', function(topic, message) {
       console.log(topic + ': ' + message.toString());
       displayComment(message.toString());
-    });
-
-    document.getElementById('username').addEventListener('change', function(event) {
-      username = event.target.value;
     });
 
     // Modify the event listener to handle "Enter" key press and "Go" button press
@@ -67,7 +88,7 @@
       const comment = commentInput.value.trim();
 
       if (comment !== "") {
-        const fullComment = `${username}: ${comment}`;
+        const fullComment = `${comment}`;
         client.publish('chat', fullComment);
         commentInput.value = "";
       }
@@ -85,6 +106,11 @@
       if (commentsDiv.children.length > 15) {
         commentsDiv.removeChild(commentsDiv.lastChild);
       }
+    }
+
+    // Function to send an action with a specific topic
+    function sendAction(topic) {
+      client.publish(topic, '1');
     }
   </script>
 </body>
