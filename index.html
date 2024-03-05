@@ -60,9 +60,11 @@
       const comment = commentInput.value.trim();
 
       if (comment !== "") {
-        const fullComment = `${comment}`;
-        client.publish('chat', fullComment);
-        commentInput.value = "";
+    const now = new Date();
+    const timestamp = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+    const fullComment = `[${timestamp}] ${comment}`;
+    client.publish('chat', fullComment);
+    commentInput.value = "";
       }
     }
 
