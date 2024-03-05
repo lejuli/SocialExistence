@@ -65,7 +65,7 @@ margin-bottom: 20px;
 }
 /* Updated CSS for button container */
 #buttonContainer {
-position: center;
+position: relative;
 margin-top: 40px;
 width: 400px; /* Adjust width as needed */
 height: 400px; /* Adjust height as needed */
