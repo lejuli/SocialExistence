@@ -3,33 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <title>Social Existence</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
 
-    #comments {
-      border: 1px solid #ccc;
-      padding: 10px;
-      max-height: 300px;
-      overflow-y: auto;
-    }
+  <link rel="stylesheet" href="style.css" />
 
-    #commentInput {
-      margin-top: 10px;
-    }
-
-    .actionButton {
-      margin-top: 10px;
-      margin-right: 10px;
-    }
-
-    /* Style to place buttons on separate lines */
-    .actionButtonContainer {
-      display: block;
-    }
-  </style>
 </head>
 <body>
   <h1>Social Existence</h1>
@@ -40,23 +16,19 @@
   <input type="text" id="commentInput" placeholder="Type your comment">
   <button onclick="publishComment()">Submit Comment</button>
 
+  <h3>Control What You See With These Buttons...</h3>
+
   <!-- Buttons with separate functions and topics on separate lines -->
-  <div class="actionButtonContainer">
-    <button class="actionButton" onclick="sendAction('zoom/TL')">Top Left
-  </div>
-  <div class="actionButtonContainer">
+  <div id="buttonContainer">
+    <button class="actionButton" onclick="sendAction('zoom/TL')">Top Left</button>
     <button class="actionButton" onclick="sendAction('zoom/TR')">Top Right</button>
-  </div>
-  <div class="actionButtonContainer">
     <button class="actionButton" onclick="sendAction('zoom/C')">Center</button>
-  </div>
-  <div class="actionButtonContainer">
     <button class="actionButton" onclick="sendAction('zoom/BL')">Bottom Left</button>
-  </div>
-  <div class="actionButtonContainer">
-    <button class="actionButton" onclick="sendAction('zoom/BR')">Bottom Rigth</button>
-  </div>
-  <div class="actionButtonContainer">
+    <button class="actionButton" onclick="sendAction('zoom/BR')">Bottom Right</button>
+    <button class="actionButton" onclick="sendAction('zoom/CT')">Center Top</button>
+    <button class="actionButton" onclick="sendAction('zoom/CR')">Center Right</button>
+    <button class="actionButton" onclick="sendAction('zoom/CL')">Center Left</button>
+    <button class="actionButton" onclick="sendAction('zoom/CB')">Center Bottom</button>
     <button class="actionButton" onclick="sendAction('zoom/RESET')">Reset</button>
   </div>
 
@@ -88,12 +60,7 @@
       const comment = commentInput.value.trim();
 
       if (comment !== "") {
-       // const fullComment = `${comment}`;
-       // client.publish('chat', fullComment);
-        //commentInput.value = "";
-        const now = new Date();
-        const timestamp = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-        const fullComment = `[${timestamp}] ${comment}`;
+        const fullComment = `${comment}`;
         client.publish('chat', fullComment);
         commentInput.value = "";
       }
