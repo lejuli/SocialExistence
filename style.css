@@ -1,147 +1,151 @@
 h1 {
 
-    color: greenyellow;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font: bolder;
-    font-style: normal;
+  color: greenyellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font: bolder;
+  font-style: normal;
+  font-size: 2em;
 }
 
 h3 {
 
-    margin-top: 40px;
-    color: rgb(57, 252, 8);
+  margin-top: 40px;
+  color: rgb(57, 252, 8);
 }
 
 label {
 
-    color: rgb(51, 255, 0);
+  color: rgb(51, 255, 0);
 }
 
 body {
 
-    background-image: url("images/hacked.jpg");
+  background-image: url("images/hacked.jpg");
 
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-size: cover; /* Ensure the background image covers the entire viewport */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover; /* Ensure the background image covers the entire viewport */
   background-position: center;
-  }
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    z-index: -1; /* Ensure it's behind other content */
-  }
-  
+  font-size: 2em;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -1; /* Ensure it's behind other content */
+}
 
-  #comments {
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-height: 300px;
-    overflow-y: auto;
-    background-color: rgb(229, 255, 227);
-  }
 
-  #commentInput {
-    margin-top: 10px;
-  }
+#comments {
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: rgb(229, 255, 227);
+  font-size: 1.5em;
+}
 
-  .actionButton {
-    margin-top: 10px;
-    margin-right: 10px;
-    
-  }
+#commentInput {
+  margin-top: 10px;
+  font-size: 1.5em; /* increase the font size */
+padding: 10px; /* increase padding */
+margin-bottom: 20px;
+}
 
-  /* Style to place buttons on separate lines */
-  .actionButtonContainer {
-    display: block;
-  }
-  /* Updated CSS for button container */
+
+
+/* Style to place buttons on separate lines */
+.actionButtonContainer {
+  display: block;
+}
+/* Updated CSS for button container */
 #buttonContainer {
-  position: relative;
-  margin-top: 40px;
-  width: 400px; /* Adjust width as needed */
-  height: 400px; /* Adjust height as needed */
+position: relative;
+margin-top: 40px;
+width: 400px; /* Adjust width as needed */
+height: 400px; /* Adjust height as needed */
 }
 
 .actionButton {
-  position: absolute;
-  width: 100px; /* Adjust button size as needed */
-  height: 40px; /* Adjust button size as needed */
-  background-color: #ccc; /* Adjust button color as needed */
-  cursor: pointer;
-  transition: background-color 0.3s;
-  text-align: center;
-  line-height: 40px; /* Center text vertically */
-  border-radius: 50%; /* Make buttons circular */
+position: absolute;
+width: 140px; /* Adjust button size as needed */
+height: 60px; /* Adjust button size as needed */
+background-color: #ccc; /* Adjust button color as needed */
+cursor: pointer;
+transition: background-color 0.3s;
+text-align: center;
+line-height: 40px; /* Center text vertically */
+font-size: 0.6em;
+border-radius: 50%; /* Make buttons circular */
+margin: 10px; 
 }
 
 .actionButton:hover {
-  background-color: #ddd; /* Adjust hover color as needed */
+background-color: #ceffcd; /* Adjust hover color as needed */
 }
 
 /* Positioning individual buttons */
 .actionButton:nth-child(3) { /* Center */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(6) { /* Center Top */
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+top: 10%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(2) { /* Top Right */
-  top: 25%;
-  left: 75%;
-  transform: translate(-50%, -50%);
+top: 25%;
+left: 75%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(7) { /* Center Right */
-  top: 50%;
-  left: 90%;
-  transform: translate(-50%, -50%);
+top: 50%;
+left: 90%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(5) { /* Bottom Right */
-  top: 75%;
-  left: 75%;
-  transform: translate(-50%, -50%);
+top: 75%;
+left: 75%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(9) { /* Center Bottom */
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+top: 90%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(4) { /* Bottom Left */
-  top: 75%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+top: 75%;
+left: 25%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(8) { /* Center Left */
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%);
+top: 50%;
+left: 10%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(1) { /* Top Left */
-  top: 25%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+top: 25%;
+left: 25%;
+transform: translate(-50%, -50%);
 }
 
 .actionButton:nth-child(10) { /* Reset Button */
-  top: 0;
-  left: 100%;
-  transform: translate(-50%, -50%);
+top: 0;
+left: 100%;
+transform: translate(-50%, -50%);
 }
