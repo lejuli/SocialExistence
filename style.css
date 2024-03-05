@@ -73,14 +73,14 @@ height: 400px; /* Adjust height as needed */
 
 .actionButton {
 position: absolute;
-width: 140px; /* Adjust button size as needed */
-height: 60px; /* Adjust button size as needed */
+width: 120px; /* Adjust button size as needed */
+height: 50px; /* Adjust button size as needed */
 background-color: #ccc; /* Adjust button color as needed */
 cursor: pointer;
 transition: background-color 0.3s;
 text-align: center;
 line-height: 40px; /* Center text vertically */
-font-size: 0.6em;
+font-size: 0.5em;
 border-radius: 50%; /* Make buttons circular */
 margin: 10px; 
 }
