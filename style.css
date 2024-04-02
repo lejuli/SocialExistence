@@ -1,27 +1,18 @@
+
 h1 {
 
   color: greenyellow;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Courier New', Courier, monospace;
   font: bolder;
   font-style: normal;
   font-size: 2em;
-}
-
-h3 {
-
-  margin-top: 40px;
-  color: rgb(57, 252, 8);
-}
-
-label {
-
-  color: rgb(51, 255, 0);
+  text-align: center;
 }
 
 body {
 
-  background-image: url("images/hacked.jpg");
-
+  /*background-image: url("images/eye.jpg"); */
+  background-image: linear-gradient(rgba(0, 0, 255, 0.415), rgb(65, 65, 232), lightblue, white);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -42,22 +33,27 @@ body::before {
 
 
 #comments {
-  border: 1px solid #ccc;
+  margin: 0 auto;
   padding: 10px;
-  max-height: 300px;
+  width: 600px;
+  border: 2px;
   overflow-y: auto;
-  background-color: rgb(229, 255, 227);
-  font-size: 1.5em;
+  font-size: small;
+  text-align: center;
 }
 
 #commentInput {
   margin-top: 10px;
   font-size: 1.5em; /* increase the font size */
-padding: 10px; /* increase padding */
+padding: 15x; /* increase padding */
 margin-bottom: 20px;
+text-align: center;
 }
 
-
+.submitComment:click
+{
+  background-color: #ceffcd;
+}
 
 /* Style to place buttons on separate lines */
 .actionButtonContainer {
@@ -71,81 +67,256 @@ width: 400px; /* Adjust width as needed */
 height: 400px; /* Adjust height as needed */
 }
 
-.actionButton {
+.actionButton1 {
 position: absolute;
-width: 140px; /* Adjust button size as needed */
-height: 60px; /* Adjust button size as needed */
+width: 50px; /* Adjust button size as needed */
+height: 50px; /* Adjust button size as needed */
 background-color: #ccc; /* Adjust button color as needed */
 cursor: pointer;
 transition: background-color 0.3s;
 text-align: center;
-line-height: 40px; /* Center text vertically */
-font-size: 0.6em;
+/*line-height: 40px; /* Center text vertically */
+font-size: 11px;
 border-radius: 50%; /* Make buttons circular */
-margin: 10px; 
+margin: auto; 
+display: block;
+margin-left: 630px;
+margin-top: -330px;
+border-color:greenyellow;
 }
 
-.actionButton:hover {
-background-color: #ceffcd; /* Adjust hover color as needed */
+.actionButton2 {
+  position: absolute;
+  width: 50px; /* Adjust button size as needed */
+  height: 50px; /* Adjust button size as needed */
+  background-color: #ccc; /* Adjust button color as needed */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  /*line-height: 40px; /* Center text vertically */
+  font-size: 11px;
+  border-radius: 50%; /* Make buttons circular */
+  margin: auto; 
+  display: block;
+  margin-left: 765px;
+  margin-top: -330px;
+  border-color:greenyellow;
+  }
+
+  .actionButton3 {
+    position: absolute;
+    width: 50px; /* Adjust button size as needed */
+    height: 50px; /* Adjust button size as needed */
+    background-color: #ccc; /* Adjust button color as needed */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    /*line-height: 40px; /* Center text vertically */
+    font-size: 11px;
+    border-radius: 50%; /* Make buttons circular */
+    margin: auto; 
+    display: block;
+    margin-left: 698px;
+    margin-top: -265px;
+    border-color:greenyellow;
+    }
+
+    .actionButton4 {
+      position: absolute;
+      width: 50px; /* Adjust button size as needed */
+      height: 50px; /* Adjust button size as needed */
+      background-color: #ccc; /* Adjust button color as needed */
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+      /*line-height: 40px; /* Center text vertically */
+      font-size: 11px;
+      border-radius: 50%; /* Make buttons circular */
+      margin: auto; 
+      display: block;
+      margin-left: 765px;
+      margin-top: -203px;
+      border-color:greenyellow;
+      }
+
+    .actionButton5 {
+      position: absolute;
+      width: 50px; /* Adjust button size as needed */
+      height: 50px; /* Adjust button size as needed */
+      background-color: #ccc; /* Adjust button color as needed */
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+      /*line-height: 40px; /* Center text vertically */
+      font-size: 11px;
+      border-radius: 50%; /* Make buttons circular */
+      margin: auto; 
+      display: block;
+      margin-left: 630px;
+      margin-top: -203px;
+      border-color:greenyellow;
+      }
+
+    .actionButton6 {
+      position: absolute;
+      width: 50px; /* Adjust button size as needed */
+      height: 50px; /* Adjust button size as needed */
+      background-color: #ccc; /* Adjust button color as needed */
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+      /*line-height: 40px; /* Center text vertically */
+      font-size: 11px;
+      border-radius: 50%; /* Make buttons circular */
+      margin: auto; 
+      display: block;
+      margin-left: 698px;
+      margin-top: -385px;
+      border-color:greenyellow;
+      }
+
+      .actionButton7 {
+        position: absolute;
+            width: 50px; /* Adjust button size as needed */
+            height: 50px; /* Adjust button size as needed */
+            background-color: #ccc; /* Adjust button color as needed */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            /*line-height: 40px; /* Center text vertically */
+            font-size: 11px;
+            border-radius: 50%; /* Make buttons circular */
+            margin: auto; 
+            display: block;
+            margin-left: 580px;
+            margin-top: -265px;
+            border-color:greenyellow;
+        }
+
+        .actionButton8 {
+          position: absolute;
+            width: 50px; /* Adjust button size as needed */
+            height: 50px; /* Adjust button size as needed */
+            background-color: #ccc; /* Adjust button color as needed */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            /*line-height: 40px; /* Center text vertically */
+            font-size: 11px;
+            border-radius: 50%; /* Make buttons circular */
+            margin: auto; 
+            display: block;
+            margin-left: 815px;
+            margin-top: -265px;
+            border-color:greenyellow;
+          }
+
+          .actionButton9 {
+            position: absolute;
+            width: 50px; /* Adjust button size as needed */
+            height: 50px; /* Adjust button size as needed */
+            background-color: #ccc; /* Adjust button color as needed */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            /*line-height: 40px; /* Center text vertically */
+            font-size: 11px;
+            border-radius: 50%; /* Make buttons circular */
+            margin: auto; 
+            display: block;
+            margin-left: 698px;
+            margin-top: -150px;
+            border-color:greenyellow;
+            }
+
+            .actionButton10 {
+              position: absolute;
+              width: 50px; /* Adjust button size as needed */
+              height: 50px; /* Adjust button size as needed */
+              background-color: #ccc; /* Adjust button color as needed */
+              cursor: pointer;
+              transition: background-color 0.3s;
+              text-align: center;
+              /*line-height: 40px; /* Center text vertically */
+              font-size: 11px;
+              border-radius: 50%; /* Make buttons circular */
+              margin: auto; 
+              display: block;
+              margin-left: 970px;
+              margin-top: -140px;
+              border-color:greenyellow;
+              }
+
+.actionButton1:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-/* Positioning individual buttons */
-.actionButton:nth-child(3) { /* Center */
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+.actionButton2:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(6) { /* Center Top */
-top: 10%;
-left: 50%;
-transform: translate(-50%, -50%);
+.actionButton3:hover {
+ background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(2) { /* Top Right */
-top: 25%;
-left: 75%;
-transform: translate(-50%, -50%);
+.actionButton4:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(7) { /* Center Right */
-top: 50%;
-left: 90%;
-transform: translate(-50%, -50%);
+.actionButton5:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(5) { /* Bottom Right */
-top: 75%;
-left: 75%;
-transform: translate(-50%, -50%);
+.actionButton6:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(9) { /* Center Bottom */
-top: 90%;
-left: 50%;
-transform: translate(-50%, -50%);
+.actionButton7:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(4) { /* Bottom Left */
-top: 75%;
-left: 25%;
-transform: translate(-50%, -50%);
+.actionButton8:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(8) { /* Center Left */
-top: 50%;
-left: 10%;
-transform: translate(-50%, -50%);
+.actionButton9:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(1) { /* Top Left */
-top: 25%;
-left: 25%;
-transform: translate(-50%, -50%);
+.actionButton10:hover {
+background-color: greenyellow; /* Adjust hover color as needed */
 }
 
-.actionButton:nth-child(10) { /* Reset Button */
-top: 0;
-left: 100%;
-transform: translate(-50%, -50%);
+.controlPad {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 80px;
+  width: 200px;
+}
+
+.camera {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top:-300px;
+}
+
+.camera2 {
+width: 100px;
+height: 100px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-right: 420px;
+margin-top: -120px;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
 }

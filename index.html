@@ -6,30 +6,43 @@
 
   <link rel="stylesheet" href="style.css" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+
 </head>
 <body>
   <h1>Social Existence</h1>
 
-  <div id="comments"></div>
+  <div id="comments">
 
-  <label for="commentInput">Leave a Comment:</label>
+  <!-- <label for="commentInput">Leave a Comment:</label> -->
   <input type="text" id="commentInput" placeholder="Type your comment">
-  <button onclick="publishComment()">Submit Comment</button>
+  <button onclick="publishComment()" class="submitComment">Submit Comment</button>
 
-  <h3>Control What You See With These Buttons...</h3>
+</div>
+<img src="images/camera2.png" alt=”Image” class="camera2"> 
+  <!-- <h3>Control What You See With These Buttons...</h3> -->
+<div>
+
+  <img src="images/controlpad2.png" alt=”Image” class="controlPad"> 
+  
+    <img src="images/camera_screen.png" alt=”Image” class="camera">
+
+    
+</div>
 
   <!-- Buttons with separate functions and topics on separate lines -->
   <div id="buttonContainer">
-    <button class="actionButton" onclick="sendAction('zoom/TL')">Top Left</button>
-    <button class="actionButton" onclick="sendAction('zoom/TR')">Top Right</button>
-    <button class="actionButton" onclick="sendAction('zoom/C')">Center</button>
-    <button class="actionButton" onclick="sendAction('zoom/BL')">Bottom Left</button>
-    <button class="actionButton" onclick="sendAction('zoom/BR')">Bottom Right</button>
-    <button class="actionButton" onclick="sendAction('zoom/CT')">Center Top</button>
-    <button class="actionButton" onclick="sendAction('zoom/CR')">Center Right</button>
-    <button class="actionButton" onclick="sendAction('zoom/CL')">Center Left</button>
-    <button class="actionButton" onclick="sendAction('zoom/CB')">Center Bottom</button>
-    <button class="actionButton" onclick="sendAction('zoom/RESET')">Reset</button>
+    <button class="actionButton1" onclick="sendAction('zoom/TL')">Top Left</button>
+    <button class="actionButton2" onclick="sendAction('zoom/TR')">Top Right</button>
+    <button class="actionButton3" onclick="sendAction('zoom/C')">Center</button>
+    <button class="actionButton4" onclick="sendAction('zoom/BL')">Bottom Left</button>
+    <button class="actionButton5" onclick="sendAction('zoom/BR')">Bottom Right</button>
+    <button class="actionButton6" onclick="sendAction('zoom/CT')">Center Top</button>
+    <button class="actionButton7" onclick="sendAction('zoom/CR')">Center Right</button>
+    <button class="actionButton8" onclick="sendAction('zoom/CL')">Center Left</button>
+    <button class="actionButton9" onclick="sendAction('zoom/CB')">Center Bottom</button>
+    <button class="actionButton10" onclick="sendAction('zoom/RESET')">Reset</button>
   </div>
 
   <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
@@ -37,6 +50,7 @@
     const client = mqtt.connect('wss://social-existence-2:socialexistence@social-existence-2.cloud.shiftr.io', {
       clientId: 'chatserver'
     });
+   // mqtt.connect('wss://social-existence:socialexistence@social-existence.cloud.shiftr.io'//
 
     client.on('connect', function() {
       console.log('connected!');
