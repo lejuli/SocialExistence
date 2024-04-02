@@ -14,7 +14,7 @@
   <h1>Social Existence</h1>
 
   <div id="comments">
-
+    <div id="commentsDisplay"></div>
   <!-- <label for="commentInput">Leave a Comment:</label> -->
   <input type="text" id="commentInput" placeholder="Type your comment">
   <button onclick="publishComment()" class="submitComment">Submit Comment</button>
@@ -83,17 +83,15 @@
     }
 
     function displayComment(comment) {
-      const commentsDiv = document.getElementById('comments');
-      const p = document.createElement('p');
-      p.textContent = comment;
+       const commentsDisplayDiv = document.getElementById('commentsDisplay'); // Target the new div
+       const p = document.createElement('p');
+       p.textContent = comment;
 
-      // Display the newest comment at the top
-      commentsDiv.insertBefore(p, commentsDiv.firstChild);
+       commentsDisplayDiv.appendChild(p);
 
-      // Remove the oldest comment if there are more than 15
-      if (commentsDiv.children.length > 9) {
-        commentsDiv.removeChild(commentsDiv.lastChild);
-      }
+       if (commentsDisplayDiv.children.length > 10) {
+    commentsDisplayDiv.removeChild(commentsDisplayDiv.firstChild);
+}
     }
 
     // Function to send an action with a specific topic
