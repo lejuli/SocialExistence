@@ -341,11 +341,7 @@ body, html {
 
 
 
-.camera2, .controlPad, .camera {
-  width: 100%; /* Make images responsive */
-  max-width: 400px; /* Maximum width */
-  height: auto; /* Keep aspect ratio */
-}
+
 
 @media screen and (max-width: 600px) {
   .actionButton1, .actionButton2, .actionButton3, .actionButton4, .actionButton5, .actionButton6, .actionButton7, .actionButton8, .actionButton9, .actionButton10 {
