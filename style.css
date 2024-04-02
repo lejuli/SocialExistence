@@ -339,14 +339,7 @@ body, html {
   margin: 20px auto;
 }
 
-.inputField, .submitComment, .actionButton1, .actionButton2, .actionButton3, .actionButton4, .actionButton5, .actionButton6, .actionButton7, .actionButton8, .actionButton9, .actionButton10 {
-  width: 100%; /* Full width */
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+
 
 .camera2, .controlPad, .camera {
   width: 100%; /* Make images responsive */
