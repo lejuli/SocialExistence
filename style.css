@@ -75,6 +75,14 @@ background-color: #ccc; /* Adjust button color as needed */
 cursor: pointer;
 transition: background-color 0.3s;
 text-align: center;
+/*line-height: 40px; /* Center text vertically */
+font-size: 11px;
+border-radius: 50%; /* Make buttons circular */
+margin: auto; 
+display: block;
+margin-left: 630px;
+margin-top: -330px;
+border-color:greenyellow;
 }
 
 .actionButton2 {
