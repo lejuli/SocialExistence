@@ -9,9 +9,8 @@ h1 {
   text-align: center;
 }
 
-body {
+body,html {
 
-  /*background-image: url("images/eye.jpg"); */
   background-image: linear-gradient(rgba(0, 0, 255, 0.415), rgb(65, 65, 232), lightblue, white);
   font-family: Arial, sans-serif;
   margin: 0;
@@ -25,8 +24,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  z-index: -1; /* Ensure it's behind other content */
+}
+ /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  
 }
 /*body::before {
   content: "";
@@ -330,18 +330,6 @@ margin-top: -120px;
     font-size: 10px; /* Adjust font size for smaller screens */
     margin: 5px; /* Reduce margin */
   }
-}
-body, html {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 255, 0.415), rgb(65, 65, 232), lightblue, white);
-  background-size: cover; 
-  background-position: center;
 }
 
 
