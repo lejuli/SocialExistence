@@ -19,10 +19,10 @@
   <input type="text" id="commentInput" placeholder="Type your comment">
   <button onclick="publishComment()" class="submitComment">Submit Comment</button>
 
-</div>
-<img src="images/camera2.png" alt=”Image” class="camera2"> 
+</div id="camera2">
+<img src ="images/camera2.png" alt=”Image” class="camera2"> 
   <!-- <h3>Control What You See With These Buttons...</h3> -->
-<div>
+<div id="frame">
 
   <img src="images/controlpad2.png" alt=”Image” class="controlPad"> 
   
@@ -47,7 +47,7 @@
 
   <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
   <script>
-    const client = mqtt.connect('wss://social-existence-2:socialexistence@social-existence-2.cloud.shiftr.io', {
+    const client = mqtt.connect('wss://social-existence:socialexistence@social-existence.cloud.shiftr.io', {
       clientId: 'chatserver'
     });
    // mqtt.connect('wss://social-existence:socialexistence@social-existence.cloud.shiftr.io'//
@@ -91,7 +91,7 @@
       commentsDiv.insertBefore(p, commentsDiv.firstChild);
 
       // Remove the oldest comment if there are more than 15
-      if (commentsDiv.children.length > 15) {
+      if (commentsDiv.children.length > 9) {
         commentsDiv.removeChild(commentsDiv.lastChild);
       }
     }

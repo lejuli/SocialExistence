@@ -5,7 +5,7 @@ h1 {
   font-family:'Courier New', Courier, monospace;
   font: bolder;
   font-style: normal;
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -19,7 +19,7 @@ body,html {
   background-position: center;
   font-size: 2em;
   content: "";
-  position: fixed;
+  
   top: 0;
   left: 0;
   width: 100%;
@@ -30,21 +30,27 @@ body,html {
 
 
 #comments {
+  border: 1px solid #ffffff00;
   margin: 0 auto;
+  margin-bottom: 10%;
   padding: 10px;
-  width: 600px;
+  width: 300px;
+  max-height: 100px;
   border: 2px;
   overflow-y: auto;
   font-size: small;
   text-align: center;
   color: white;
+  background-color: rgba(255, 255, 255, 0);
+  position: center;
 }
 
 #commentInput {
-  margin-top: 10px;
+ margin-top: 10px;
   font-size: 1.5em; /* increase the font size */
 padding: 15x; /* increase padding */
 margin-bottom: 20px;
+text-align: center;
 
 }
 
@@ -60,10 +66,10 @@ margin-bottom: 20px;
 }
 /* Updated CSS for button container */
 #buttonContainer {
-position: left;
-margin-top: 40px;
-width: 400px; /* Adjust width as needed */
-height: 400px; /* Adjust height as needed */
+margin-left: -505px;
+margin-top: 9px;
+width: 300px; /* Adjust width as needed */
+height: 300px; /* Adjust height as needed */
 }
 
 .actionButton1 {
@@ -241,8 +247,8 @@ border-color:greenyellow;
               border-radius: 50%; /* Make buttons circular */
               margin: auto; 
               display: block;
-              margin-left: 970px;
-              margin-top: -140px;
+              margin-left: 850px;
+              margin-top: -100px;
               border-color:greenyellow;
               }
 
@@ -290,30 +296,31 @@ background-color: greenyellow; /* Adjust hover color as needed */
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  margin-top: 80px;
-  width: 200px;
+  
+  width: 100%;
+  margin-bottom: 10px;
+  width: 250px;
 }
 
 .camera {
   display: block;
-  margin-left: auto;
+  margin-left: -10px;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
+  height: 400px;
   margin-top:-300px;
 }
 
 .camera2 {
 width: 100px;
 height: 100px;
-display: block;
-margin-left: auto;
+position: right;
+margin-left: 300px;
 margin-right: auto;
-margin-right: 420px;
 margin-top: -120px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 412px) {
   /* For mobile phones: */
   .menu, .main, .right {
     width: 50px;
